@@ -1,26 +1,86 @@
+@font-face {
+    font-family: 'Example family';
+    font-style: normal;
+    font-weight: 100;
+    src: url(../fonts/example-100.woff2) format('woff2'),
+        url(../fonts/example-100.woff) format('woff'),
+        url(../fonts/example-100.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: 'Example family';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/example-400.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Example family';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/example-700.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Example family';
+    font-style: italic;
+    font-weight: 700;
+    src: url(../fonts/example-bold-it.woff2) format('woff2');
+}
+
+.list-item-example {
+    font-family: 'Example family';
+    font-weight: 700;
+}
+
+
+:root {
+    --title-color: #000000;
+    --accent-color: #18A0FB;
+    --text-shadow: 0 0 5px #555;
+    --font-logo: 'Comfortaa', 'Segoe UI', sans-serif;
+    --font-text: 'Montserrat', 'Segoe UI', sans-serif;
+    
+    --shadow-color: rgba(0, 0, 0, 0.15);
+    --text-color: rgba(0, 0, 0, 0.8)
+}
+
 body {
     color:rgba(0, 0, 0, 80%);
-    font-style: normal;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--font-text);
+    letter-spacing: -0.015em;
+    font-size: 18px;
+    line-height: 1.66;
+    font-family: Roboto, sans-serif;
+}
+
+.logo {
+    font-family: Raleway, ;
 }
 
 .hero-title {
-    color: #000000;
+    color: var(--title-color);
     font-size: 56px;
+    font-weight: 400;
+    line-height: 80px;
+    line-height: 1.42;
+    text-align: center;
 }
 
 .section-title {
-    color: #000000;
+    color: var(--title-color);
     font-size: 48px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 .section-subtitle {
-    color: #000000;
+    color: var(--title-color);
     font-size: 36px;
 }
 
 .item-title {
-    color: #000000;
+    color: var(--title-color);
     font-size: 24px;
     font-weight: bold;
 }
@@ -28,6 +88,11 @@ body {
 .button-primary {
     background-color: #18A0FB;
     color: #ffffff;
+    
+    --button-height: 50px;
+
+    height: 40px;
+    line-height: 50px;
 }
 
 .button-primary:hover,
@@ -56,6 +121,7 @@ a {
 }
 
 .logo {
+    font-family: var(--font-logo);
     color: #000000;
 }
 
