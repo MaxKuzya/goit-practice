@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
     <!-- Шапка сайта -->
     <header class="site-header">
-      <nav>
+      <nav class="container">
         
       <a class="logo" href="#anchor">
         <img src="./images/placeholder.png" alt="" width="122" height="32">
@@ -31,102 +31,124 @@
     </header>
 
     <main>
-      <ul>
-        <li><a href=""><img src="" alt=""></a></li>
-        <li><a href=""><img src="" alt=""></a></li>
-        <li><a href=""><img src="" alt=""></a></li>
-        <li><a href=""><img src="" alt=""></a></li>
-        <li><a href=""><img src="" alt=""></a></li>
-        <li><a href=""><img src="" alt=""></a></li>
-      </ul>
 
 
-      <pre>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-        veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-        cumque fuga facere labore quo id necessitatibus quaerat rerum.
-      </pre>
-      
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati commodi,
-        veritatis nihil alias iste odit similique sit eius optio veniam, impedit
-        cumque fuga facere labore quo id necessitatibus quaerat rerum.
-      </p>
-
+      <a class="button-round" href="">W</a>
       <!-- Герой -->
-      <section>
+      <section class="hero-section">
         <h1 class="hero-title">The largest community of photo enthusiasts</h1>
         <a class="button-primary" href="">Join today</a>
       </section>
 
       <!-- Преимущества -->
-      <section class="features">
-        <h2 class="section-title features-title">Snap photos and share like <br />never before</h2>
+      <section class="features-section">
+        <div class="container">
+          <h2 class="section-title features-title">Snap photos and share like <br />never before</h2>
 
-        <ul class="list">
-          <li>
-            <h3 class="item-title">Sed ut perspiciatis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, <span class="attention">sed quia consequuntur</span> magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est.
-            </p>
-            <a href="">Learn more</a>
-          </li>
-          <li>
-            <h3 class="item-title">Lorem ipsum dolor</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est.
-            </p>
-            <a href="">Learn more</a>
-          </li>
-          <li>
-            <h3 class="item-title">Nemo enim ipsam</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est.
-            </p>
-            <a href="">Learn more</a>
-          </li>
-          <li>
-            <h3 class="item-title">Tempor incididunt</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est.
-            </p>
-            <a href="">Learn more</a>
-          </li>
-        </ul>
+          <ul class="list">
+            <li class="feature-item">
+              <h3 class="item-title">Sed ut perspiciatis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, <span class="attention">sed quia consequuntur</span> magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est.
+              </p>
+              <a class="button-secondary" href="">Learn more</a>
+            </li>
+            <li class="feature-item">
+              <h3 class="item-title">Lorem ipsum dolor</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est.
+              </p>
+              <a class="button-secondary" href="">Learn more</a>
+            </li>
+            <li class="feature-item">
+              <h3 class="item-title">Nemo enim ipsam</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est.
+              </p>
+              <a class="button-secondary" href="">Learn more</a>
+            </li>
+            <li class="feature-item">
+              <h3 class="item-title">Tempor incididunt</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est.
+              </p>
+              <a class="button-secondary" href="">Learn more</a>
+            </li>
+          </ul>
+        </div> 
       </section>
 
       <!-- Примеры работ -->
-      <section>
-        <h2 class="section-title">Примеры работ</h2>
+      <section class="our-works-section">
+  
+          <h2 class="section-title">Примеры работ</h2>
 
-        <ul>
-          <li>
-            <img src="./images/placeholder.png" alt="Зимний лес" width="750" />
-            <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-            </p>
-          </li>
-          <li>
-            <img src="./images/placeholder.png" alt="Поле" width="750" />
-            <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
-            </p>
-          </li>
-        </ul>
+          <ul class="list">
+            <li class="our-work-item">
+              <div class="container">
+              <img src="./images/placeholder.png" alt="Зимний лес" width="750" />
+              <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+              </p>
+            </div>
+            </li>
+            <li class="our-work-item">
+              <div class="container">
+                <img src="./images/placeholder.png" alt="Поле" width="750" />
+              <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+              </p>
+              </div>
+            </li>
+            
+            <li class="our-work-item">
+              <div class="container">
+                <img src="./images/placeholder.png" alt="Поле" width="750" />
+              <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+              </p>
+              </div>
+            </li>
+            <li class="our-work-item">
+              <div class="container">
+                <img src="./images/placeholder.png" alt="Поле" width="750" />
+              <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+              </p>
+              </div>
+            </li>
+            <li class="our-work-item">
+              <div class="container">
+                <img src="./images/placeholder.png" alt="Поле" width="750" />
+              <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+                aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+              </p>
+              </div>
+            </li>
+          </ul>
       </section>
 
       <!-- Testimonials -->
