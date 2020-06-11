@@ -4,36 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- Шапка сайта -->
     <header class="site-header">
-      <nav class="container">
-        
-      <a class="logo" href="#anchor">
-        <img src="./images/placeholder.png" alt="" width="122" height="32">
-        photo
-      </a>
+      <nav class="container site-header-content">
+        <a class="logo" href="#anchor">
+          <img src="./images/placeholder.png" alt="" width="23" height="23" />
+          photo
+        </a>
 
-      <ul class="list">
-        <li><a class="link" href="./portfolio.html">Portfolio</a></li>
-        <li><a class="link" href="">Pricing</a></li>
-        <li><a class="link" href="">Community</a></li>
-        <li><a class="link" href="">Support</a></li>
-      </ul>
+        <ul class="list site-nav-main">
+          <li class="site-nav-item">
+            <a class="link" href="./portfolio.html">Portfolio</a>
+          </li>
+          <li class="site-nav-item"><a class="link" href="">Pricing</a></li>
+          <li class="site-nav-item"><a class="link" href="">Community</a></li>
+          <li class="site-nav-item"><a class="link" href="">Support</a></li>
+        </ul>
 
-      <a class="button-secondary" href="">Log in</a>
-      <a class="button-primary" href="">Register</a>
-
+        <ul class="list site-nav-login">
+          <li class="site-nav-login-item">
+            <a class="button-secondary" href="">Log in</a>
+          </li>
+          <li class="site-nav-login-item">
+            <a class="button-primary" href="">Register</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main>
+      <div class="outer-box">
+        <div class="inner-box"></div>
+      </div>
 
+      <div>
+        <div class="test-container">
+          <ul class="list features-list">
+            <li class="feature-item feature-item-2-col">
+              <div class="card">
+                <div class="card-image">
+                  <img src="./images/placeholder.png" alt="" />
+                  <div class="card-info-overlay"></div>
+                </div>
+                <div class="card-body">
+                  <div class="card-title">Технокряк</div>
+                  <div class="card-description">Дизайн</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-      <a class="button-round" href="">W</a>
+      <a class="link">No HREF link</a>
+      <a class="link" href="">Empty HREF link</a>
+      <a class="link" href="/">Valid link</a>
       <!-- Герой -->
       <section class="hero-section">
         <h1 class="hero-title">The largest community of photo enthusiasts</h1>
@@ -43,15 +79,19 @@
       <!-- Преимущества -->
       <section class="features-section">
         <div class="container">
-          <h2 class="section-title features-title">Snap photos and share like <br />never before</h2>
+          <h2 class="section-title features-title">
+            Snap photos and share like <br />never before
+          </h2>
 
-          <ul class="list">
+          <ul class="list features-list">
             <li class="feature-item">
               <h3 class="item-title">Sed ut perspiciatis</h3>
               <p>
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, <span class="attention">sed quia consequuntur</span> magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est.
+                aut fugit,
+                <span class="attention">sed quia consequuntur</span> magni
+                dolores eos qui ratione voluptatem sequi nesciunt. Neque porro
+                quisquam est.
               </p>
               <a class="button-secondary" href="">Learn more</a>
             </li>
@@ -83,72 +123,80 @@
               <a class="button-secondary" href="">Learn more</a>
             </li>
           </ul>
-        </div> 
+        </div>
       </section>
 
       <!-- Примеры работ -->
       <section class="our-works-section">
-  
-          <h2 class="section-title">Примеры работ</h2>
+        <h2 class="section-title">Примеры работ</h2>
 
-          <ul class="list">
-            <li class="our-work-item">
-              <div class="container">
-              <img src="./images/placeholder.png" alt="Зимний лес" width="750" />
+        <ul class="list">
+          <li class="our-work-item">
+            <div class="container">
+              <img
+                src="./images/placeholder.png"
+                alt="Зимний лес"
+                width="750"
+              />
               <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
               <p>
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
                 aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
               </p>
             </div>
-            </li>
-            <li class="our-work-item">
-              <div class="container">
-                <img src="./images/placeholder.png" alt="Поле" width="750" />
+          </li>
+          <li class="our-work-item">
+            <div class="container">
+              <img src="./images/placeholder.png" alt="Поле" width="750" />
               <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
               <p>
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
                 aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
               </p>
-              </div>
-            </li>
-            
-            <li class="our-work-item">
-              <div class="container">
-                <img src="./images/placeholder.png" alt="Поле" width="750" />
+            </div>
+          </li>
+
+          <li class="our-work-item">
+            <div class="container">
+              <img src="./images/placeholder.png" alt="Поле" width="750" />
               <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
               <p>
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
                 aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
               </p>
-              </div>
-            </li>
-            <li class="our-work-item">
-              <div class="container">
-                <img src="./images/placeholder.png" alt="Поле" width="750" />
+            </div>
+          </li>
+          <li class="our-work-item">
+            <div class="container">
+              <img src="./images/placeholder.png" alt="Поле" width="750" />
               <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
               <p>
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
                 aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
               </p>
-              </div>
-            </li>
-            <li class="our-work-item">
-              <div class="container">
-                <img src="./images/placeholder.png" alt="Поле" width="750" />
+            </div>
+          </li>
+          <li class="our-work-item">
+            <div class="container">
+              <img src="./images/placeholder.png" alt="Поле" width="750" />
               <h3 class="item-title">Sed ut perspiciatis unde omnis</h3>
               <p>
                 Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
                 aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.
+                voluptatem sequi nesciunt. Neque porro quisquam est, qui
+                dolorem.
               </p>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <!-- Testimonials -->
@@ -166,8 +214,8 @@
             /></a>
           </li>
           <li>
-            <a href=""
-              ><img src="./images/icon.svg" alt="Логотип компании"
+            <a href="">
+              <img src="./images/icon.svg" alt="Логотип компании"
             /></a>
           </li>
           <li>
@@ -206,15 +254,23 @@
         <h2>Snap photos and share like never before</h2>
         <ul>
           <li>
-            <img src="" alt="">
+            <img src="" alt="" />
             <h3>Sed ut perspiciatis</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt. Neque porro quisquam est.
+            </p>
             <a href="">Learn more</a>
           </li>
           <li>
-            <img src="" alt="">
+            <img src="" alt="" />
             <h3>Sed ut perspiciatis</h3>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+            <p>
+              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+              aut fugit, sed quia consequuntur magni dolores eos qui ratione
+              voluptatem sequi nesciunt. Neque porro quisquam est.
+            </p>
             <a href="">Learn more</a>
           </li>
         </ul>
