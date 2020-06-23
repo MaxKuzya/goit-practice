@@ -258,6 +258,16 @@ Features styles
   align-items: flex-start;
 }
 
+.feature-item:hover,
+.feature-item:focus-within {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.feature-item:hover .item-title {
+  color: var(--accent-color);
+}
+
 .feature-item-2-col {
   width: calc(100% * 2 / 3);
 }
@@ -320,4 +330,17 @@ Our works
 
 .card-body > :not(:last-child) {
   margin-bottom: 10px;
+}
+
+.site-nav .item {
+  display: flex;
+  margin: 0;
+  margin-bottom: 10px;
+  background-color: white;
+  background-color: red;
+}
+
+.footer-lower-section {
+  border-top: 1px solid #777;
+  padding: 20px 0;
 }
