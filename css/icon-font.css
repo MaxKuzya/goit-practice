@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.woff?pbfn82') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  font-family: 'icomoon' !important;
+}
+
+.icon-normal .path1:before {
+  content: '\e900';
+  color: rgb(33, 33, 33);
+}
+.icon-normal .path2:before {
+  content: '\e901';
+  margin-left: -0.9423828125em;
+  color: rgb(33, 150, 243);
+}
+.icon-pacman:before {
+  content: '\e916';
+}
+.icon-mic:before {
+  content: '\e91e';
+}
+.icon-credit-card:before {
+  content: '\e93f';
+}
+.icon-alarm:before {
+  content: '\e950';
+}

@@ -1,7 +1,8 @@
-# 8 Background
+# 8 SVG
 
-- Сжатие изображений с потерей (Lossy) и без потери качества (Lossless)
-- Оптимизация изображений (Content Delivery Network = CDN)
-- Атрибут aria-label для элементов без текста (кнопка-иконка)
-- QnA
-- Практика
+- currentColor
+- Общий эффект ховера иконке и тексту
+- Центрирование иконок
+- SVG-спрайты и с icomoon.io
+- Стилизация разных path в спрайте через css-переменные.
+  https://frontstuff.io/multi-colored-svg-symbol-icons-with-css-variables"

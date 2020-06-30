@@ -14,11 +14,16 @@ html {
 }
 
 body {
-  color: rgba(0, 0, 0, 80%);
+  color: var(--text-color);
   font-family: var(--font-text);
   letter-spacing: -0.015em;
   font-size: 18px;
   line-height: 1.4;
+  fill: var(--text-color);
+}
+
+svg {
+  fill: inherit;
 }
 
 *,
@@ -220,6 +225,8 @@ Hero section
   text-align: center;
   padding-top: 156px;
   padding-bottom: 156px;
+  background-image: linear-gradient(var(--bg-color), var(--bg-color)),
+    url(../images/placeholder.png);
 
   background-size: cover;
   background-position: center;
@@ -414,4 +421,30 @@ Our works
 .footer-lower-section {
   border-top: 1px solid #777;
   padding: 20px 0;
+}
+
+button {
+  border: 3px solid salmon;
+  box-shadow: 0 0 0 3px salmon;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  margin: 50px;
+  padding: 20px;
+  border-color: aqua;
+  box-shadow: 0 0 0 2px aqua;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.icon-button:hover svg {
+  fill: currentColor;
 }
