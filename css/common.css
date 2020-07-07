@@ -5,17 +5,23 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
   color: #2a2a2a;
   background-color: #fff;
+  min-height: 1500px;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+h1,
+h2 {
+  margin-top: 0;
 }
 
 .visually-hidden {
@@ -27,4 +33,63 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.form {
+  width: 500px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.form textarea {
+  resize: vertical;
+  max-height: 300px;
+  min-height: 100px;
+
+  font-family: inherit;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-field h2 {
+  margin-bottom: 4px;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+}
+
+.form-field:focus-within * {
+  color: rgb(0, 152, 253);
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 8px 12px 8px 32px;
+  border: 1px solid rgb(0, 152, 253);
+  border-radius: 5px;
+  transition: 200ms ease all;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: rgb(253, 186, 0);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.form-field input[type='checkbox'] {
+}
+
+.form-field input::placeholder {
+  color: violet;
 }

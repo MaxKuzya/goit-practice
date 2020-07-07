@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Карточка товара с иконками</title>
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+  <body>
+    <div>
+      <a href="/index.html">Назад на главную</a>
+    </div>
+
+    <h1>Форма</h1>
+
+    <form autocomplete="off" class="form js-form">
+      <div class="form-field">
+        <label for="customer-name">Имя</label>
+        <input
+          autofocus
+          type="text"
+          placeholder="John Smith"
+          name="customer-name"
+          id="customer-name"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="customer-phone">Телефон</label>
+        <input type="tel" autocomplete="on" name="customer-phone" id="customer-phone" />
+      </div>
+
+      <div class="form-field">
+        <label for="customer-mail">E-mail</label>
+        <input
+          type="text"
+          value="example@mail.com"
+          name="customer-mail"
+          id="customer-mail"
+        />
+      </div>
+
+      <div class="form-field" role="group">
+        <h2>Опции товара</h2>
+        <div>
+          <input
+            type="checkbox"
+            checked="checked"
+            name="product-option"
+            value="product-option-1"
+            id="product-option-1"
+          />
+          <label for="product-option-1">Красивый</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            checked
+            name="product-option"
+            value="product-option-2"
+            id="product-option-2"
+          />
+          <label for="product-option-2">Большой</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="product-option"
+            value="product-option-3"
+            id="product-option-3"
+          />
+          <label for="product-option-3">Необычный</label>
+        </div>
+      </div>
+
+      <div class="form-field" role="group">
+        <h2>Цвет товара</h2>
+        <div>
+          <input
+            type="radio"
+            name="product-color"
+            value="product-color-1"
+            id="product-color-1"
+          />
+          <label for="product-color-1">Красный</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="product-color"
+            value="product-color-2"
+            id="product-color-2"
+          />
+          <label for="product-color-2">Зелёный</label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            name="product-color"
+            value="product-color-3"
+            id="product-color-3"
+          />
+          <label for="product-color-3">Синий</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="comment">Комментарии к заказу</label>
+        <textarea name="comment" id="comment" rows="5"> </textarea>
+      </div>
+
+      <div class="form-field">
+        <div>
+          <input
+            type="checkbox"
+            required
+            value="policy"
+            name="policy"
+            id="policy"
+          />
+          <label for="policy">Согласен со всеми правилами</label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <div>
+          <input
+            type="checkbox"
+            value="subscribe"
+            name="subscribe"
+            id="subscribe"
+          />
+          <label for="subscribe">Подписаться на новости</label>
+        </div>
+      </div>
+
+      <button type="submit">Отправить форму</button>
+    </form>
+
+    <!-- Комментарий к заказу -->
+
+    <!-- Подтверждение -->
+
+    <script>
+      (() => {
+        document.querySelector('.js-form').addEventListener('submit', e => {
+          e.preventDefault();
+
+          console.log('');
+          console.count('Submit #');
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+            console.log(`${name}: ${value}`),
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
