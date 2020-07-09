@@ -24,3 +24,20 @@
   max-height: 100%;
   overflow: auto;
 }
+
+.close-button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  transition: 200ms ease all;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+}

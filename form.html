@@ -13,133 +13,104 @@
 
     <h1>Форма</h1>
 
-    <form autocomplete="off" class="form js-form">
-      <div class="form-field">
-        <label for="customer-name">Имя</label>
-        <input
-          autofocus
-          type="text"
-          placeholder="John Smith"
-          name="customer-name"
-          id="customer-name"
-        />
-      </div>
-
-      <div class="form-field">
-        <label for="customer-phone">Телефон</label>
-        <input type="tel" autocomplete="on" name="customer-phone" id="customer-phone" />
-      </div>
-
-      <div class="form-field">
-        <label for="customer-mail">E-mail</label>
-        <input
-          type="text"
-          value="example@mail.com"
-          name="customer-mail"
-          id="customer-mail"
-        />
-      </div>
-
-      <div class="form-field" role="group">
-        <h2>Опции товара</h2>
-        <div>
+    <div class="form-container">
+      <form autocomplete="off" class="form js-form">
+        <div class="form-field">
           <input
-            type="checkbox"
-            checked="checked"
-            name="product-option"
-            value="product-option-1"
-            id="product-option-1"
+            class="form-input"
+            type="text"
+            placeholder=" "
+            name="customer-name"
+            id="customer-name"
           />
-          <label for="product-option-1">Красивый</label>
+          <span class="icon"></span>
+          <label class="form-label" for="customer-name">Имя</label>
+          <!-- <span class="form-error">Ошибка валидации!</span> -->
         </div>
-
-        <div>
+  
+        <label class="form-field">
           <input
-            type="checkbox"
-            checked
-            name="product-option"
-            value="product-option-2"
-            id="product-option-2"
+            class="form-input"
+            type="tel"
+            autocomplete="on"
+            placeholder=" "
+            name="customer-phone"
           />
-          <label for="product-option-2">Большой</label>
-        </div>
-
-        <div>
+          <span class="icon"></span>
+          <span class="form-label">Телефон</span>
+        </label>
+  
+        <label class="form-field">
           <input
-            type="checkbox"
-            name="product-option"
-            value="product-option-3"
-            id="product-option-3"
+            class="form-input"
+            type="email"
+            placeholder=" "
+            name="customer-mail"
           />
-          <label for="product-option-3">Необычный</label>
+          <span class="icon"></span>
+          <span class="form-label">E-mail</span>
+        </label>
+  
+        <div class="form-field">
+          <label class="radio-field">
+            <input
+              type="radio"
+              class="radio visually-hidden"
+              value="policy"
+              name="radio-test"
+            />
+            <span class="radio-label">Первая опция</span>
+          </label>
+        <div class="form-field">
+          <label class="radio-field">
+            <input
+              type="radio"
+              class="radio visually-hidden"
+              value="policy"
+              name="radio-test"
+            />
+            <span class="radio-label">Опция №2</span>
+          </label>
+        <div class="form-field">
+          <label class="radio-field">
+            <input
+              type="radio"
+              class="radio visually-hidden"
+              value="policy"
+              name="radio-test"
+            />
+            <span class="radio-label">Последний вариант</span>
+          </label>
         </div>
-      </div>
-
-      <div class="form-field" role="group">
-        <h2>Цвет товара</h2>
-        <div>
-          <input
-            type="radio"
-            name="product-color"
-            value="product-color-1"
-            id="product-color-1"
-          />
-          <label for="product-color-1">Красный</label>
+        </label>
+  
+        <div class="form-field">
+          <label class="checkbox-field">
+            <input
+              type="checkbox"
+              class="checkbox visually-hidden"
+              value="policy"
+              name="policy"
+            />
+            <span class="checkbox-label">Согласен со всеми<a href="">правилами</a> !</span>
+          </label>
         </div>
-
-        <div>
-          <input
-            type="radio"
-            name="product-color"
-            value="product-color-2"
-            id="product-color-2"
-          />
-          <label for="product-color-2">Зелёный</label>
+  
+        <div class="form-field">
+          <label class="checkbox-field">
+            <input
+              type="checkbox"
+              class="checkbox visually-hidden"
+              value="subscribe"
+              name="subscribe"
+            />
+            <span class="checkbox-label">Подписаться на новости</span>
+          </label>
         </div>
-
-        <div>
-          <input
-            type="radio"
-            name="product-color"
-            value="product-color-3"
-            id="product-color-3"
-          />
-          <label for="product-color-3">Синий</label>
-        </div>
-      </div>
-
-      <div class="form-field">
-        <label for="comment">Комментарии к заказу</label>
-        <textarea name="comment" id="comment" rows="5"> </textarea>
-      </div>
-
-      <div class="form-field">
-        <div>
-          <input
-            type="checkbox"
-            required
-            value="policy"
-            name="policy"
-            id="policy"
-          />
-          <label for="policy">Согласен со всеми правилами</label>
-        </div>
-      </div>
-
-      <div class="form-field">
-        <div>
-          <input
-            type="checkbox"
-            value="subscribe"
-            name="subscribe"
-            id="subscribe"
-          />
-          <label for="subscribe">Подписаться на новости</label>
-        </div>
-      </div>
-
-      <button type="submit">Отправить форму</button>
-    </form>
+  
+        <button type="submit">Отправить форму</button>
+      </form>
+    </div>
 
     <!-- Комментарий к заказу -->
 
@@ -154,7 +125,7 @@
           console.count('Submit #');
 
           new FormData(e.currentTarget).forEach((value, name) =>
-            console.log(`${name}: ${value}`),
+            console.log(name, ':', value),
           );
         });
       })();

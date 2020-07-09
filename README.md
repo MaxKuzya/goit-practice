@@ -1,8 +1,8 @@
-# 11 - Basic forms
+# 12 - Custom form elements
 
-- Верстаем произвольную форму с использованием стандартных элементов
-- name, value, placeholder, autofocus, autocomplete, required, checked и т. д.
-- Разобрать радио-кнопки и чекбоксы, важность name и value.
-- Проблема стилизации fieldset через flexbox и почему используем
-  div[role=""group""].
-- Рассмотреть тег button:submit и почему не input:button
+- Добавить оформление состояние элементво формы (valid, checked, disabled итд)
+- Разобрать псевдокласс :focus-within и :placeholder-shown. Показать пример,
+  например уезжающий наверх текст label при получении фокуса инпутом (как в
+  material ui)
+- Сверстать кастомные чекбоксы или радио-кнопки с svg-иконками, анимацией и т.
+  д."

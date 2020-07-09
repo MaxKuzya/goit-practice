@@ -13,6 +13,11 @@ body {
   min-height: 1500px;
 }
 
+.disable-scroll {
+  overflow: hidden;
+  padding-right: 17px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -35,14 +40,19 @@ h2 {
   overflow: hidden;
 }
 
-.form {
-  width: 500px;
-  padding: 20px;
+.form-container {
+  max-width: 600px;
+  padding: 30px 20px;
   margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 5px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form {
+  width: 100%;
 }
 
 .form textarea {
@@ -54,9 +64,10 @@ h2 {
 }
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .form-field h2 {
@@ -73,8 +84,8 @@ h2 {
 
 .form-field input,
 .form-field textarea {
-  padding: 8px 12px 8px 32px;
-  border: 1px solid rgb(0, 152, 253);
+  padding: 8px 12px 8px 40px;
+  border: 1px solid #2d2d2d;
   border-radius: 5px;
   transition: 200ms ease all;
 }
@@ -82,14 +93,159 @@ h2 {
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: rgb(253, 186, 0);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
+  border-color: rgb(0, 152, 253);
+  box-shadow: 0 0 8px 0 rgb(0, 152, 253, 0.5);
 }
 
-.form-field input[type='checkbox'] {
+.form-field:focus-within input::placeholder {
+  color: rgb(0, 152, 253);
 }
 
 .form-field input::placeholder {
-  color: violet;
+  color: rgb(167, 64, 167);
+}
+
+/* 
+
+============= 
+
+*/
+
+.form-field {
+  --icon-width: 16px;
+  --icon-padding: 16px;
+  --text-padding: 8px;
+}
+
+.form-label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(40px);
+
+  font-size: 14px;
+  color: #444;
+  transition: 300ms ease transform;
+}
+
+.form-input {
+  /* padding-left: calc(--icon-padding + --icon-width + --text-padding); */
+}
+
+.form-error {
+  font-size: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  color: red;
+  line-height: 1;
+}
+
+.icon {
+  position: absolute;
+
+  left: var(--icon-padding);
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: var(--icon-width);
+  height: var(--icon-width);
+
+  background-color: transparent;
+  border: 1px solid #2a2a2a;
+  border-radius: 50%;
+
+  transition: 300ms ease background;
+}
+
+/* 
+
+Способ 1
+
+.form-input:not(:placeholder-shown) ~ .form-label,
+.form-input:focus ~ .form-label {
+  transform: translateY(-40px) translateX(0);
+}
+
+.form-input:focus ~ .icon {
+  background-color: fuchsia;
+} 
+
+*/
+
+/* Способ 2 */
+
+.form-input:not(:placeholder-shown) ~ .form-label,
+.form-field:focus-within .form-label {
+  transform: translateY(-40px) translateX(0);
+}
+
+.form-field:focus-within .icon {
+  background-color: fuchsia;
+}
+
+/* 
+
+Checkboxes
+
+*/
+
+.checkbox-field,
+.checkbox-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.checkbox-label a {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.checkbox-label:before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-right: 8px;
+  flex-shrink: 0;
+
+  transition: 150ms ease all;
+}
+
+.checkbox:checked ~ .checkbox-label:before {
+  background-color: #2196f3;
+  border-color: transparent;
+  background-image: url('../images/dice.svg');
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 
+
+Radio
+
+*/
+
+.radio-field,
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.radio-label {
+  padding: 12px 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+  flex-shrink: 0;
+
+  transition: 150ms ease all;
+}
+
+.radio:checked ~ .radio-label {
+  background-color: #2196f3;
+  color: white;
 }
