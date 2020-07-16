@@ -1,0 +1,63 @@
+.link {
+  box-shadow: $regular-shadow;
+  transition: 250ms $timing-function all;
+
+  // &.active {
+  //   color: blue;
+  // }
+
+  &-item {
+    color: green;
+  }
+
+  &-item:hover {
+    color: red;
+
+    body.disable-scroll & {
+      color: black;
+    }
+  }
+
+  &:focus {
+  }
+
+  &.active {
+  }
+
+  // body.disable-scroll & {
+  //   color: purple;
+  // }
+
+  // &:hover {
+  //   color: red;
+  // }
+}
+
+.list {
+  &-item {
+    margin-left: 15px;
+
+    & + & {
+      margin-left: 0;
+    }
+  }
+}
+
+@mixin add-pseudo($type: before) {
+  @if ($type == before) {
+    &:before {
+      content: '';
+      border: 1px solid black;
+    }
+  } @else {
+    &:after {
+      content: '';
+      border: 1px solid black;
+    }
+  }
+}
+
+.pseudo-test {
+  @include add-pseudo();
+  @include add-pseudo(after);
+}

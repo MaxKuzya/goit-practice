@@ -1,0 +1,35 @@
+%list-placeholder {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  .list-item {
+    padding: 0;
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.list {
+  @extend %list-placeholder;
+}
+
+.features-list {
+  @extend %list-placeholder;
+}
+
+@mixin flex-center($type: flex) {
+  display: $type;
+  justify-content: center;
+  align-items: center;
+}
+
+.example {
+  @include flex-center();
+}
+
+.one-more-example {
+  @include flex-center(inline-flex);
+}
