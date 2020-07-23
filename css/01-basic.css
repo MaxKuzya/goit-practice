@@ -1,0 +1,12 @@
+.thumb {
+  outline: 5px solid salmon;
+  width: 100%;
+}
+
+.thumb img {
+  width: 100%;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=01-basic.css.map */

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отзывчивые изображения</title>
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+  <body>
+    <p><a href="./index.html">На главную</a></p>
+
+    <!-- Портретные/альбомные изображения -->
+    <!-- <picture id="" class="">
+      <source
+        srcset="./img/cat-landscape-wide.jpg"
+        media="(min-width: 768px)"
+      />
+
+      <source
+        srcset="./img/cat-landscape-normal.jpg"
+        media="(min-width: 480px)"
+      />
+
+      <source srcset="./img/cat-portrait.jpg" media="(max-width: 479px)" />
+
+      <img src="./img/cat-320.jpg" alt="Котик" />
+    </picture> -->
+
+    <!-- Разные форматы изображений -->
+    <picture id="" class="">
+      <source
+        srcset="./img/cat-1280.webp"
+        media="(min-width: 768px)"
+        type="image/webp"
+      />
+      <source
+        srcset="./img/cat-1280.jpg"
+        media="(min-width: 768px)"
+        type="image/jpg"
+      />
+
+      <source
+        srcset="./img/cat-960.webp"
+        media="(min-width: 480px)"
+        type="image/webp"
+      />
+      <source
+        srcset="./img/cat-960.jpg"
+        media="(min-width: 480px)"
+        type="image/jpg"
+      />
+
+      <source srcset="./img/cat-320.webp" type="image/webp" />
+      <source srcset="./img/cat-320.jpg" type="image/jpg" />
+
+      <img src="./img/cat-320.jpg" alt="Котик" />
+    </picture>
+  </body>
+</html>
