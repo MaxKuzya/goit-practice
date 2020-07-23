@@ -3,25 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Позиционированные элементы</title>
+    <title>Отзывчивая вёрстка</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <ul class="nav">
-      <li>
-        <a href="./form.html">
-          Форма
-        </a>
-      </li>
-      <li><a href="./modal.html">Модальное окно с формой</a></li>
-    </ul>
+    <div class="page-header">
+      <div class="container">
+        <nav class="nav">
+          <a class="company-logo" href="">Логотип</a>
+          <button class="menu-button" data-menu-button>
+            Меню
+            <svg>
+              <use class="icon-open"></use>
+              <use class="icon-close"></use>
+            </svg>
+          </button>
+          <section class="menu-container" data-menu>
+            <ul class="menu-list">
+              <li class="menu-item"><a href="">Портфолио</a></li>
+              <li class="menu-item"><a href="">О нас</a></li>
+              <li class="menu-item"><a href="">Контакты</a></li>
+            </ul>
+          </section>
+        </nav>
+      </div>
+    </div>
 
-    <br />
+    <main>
+      <section class="section features">
+        <div class="container">
+          <h2 class="section-title">Заголовок первой секции</h2>
 
-    <ul class="features-list">
-      <li class="icon icon-facebook"></li>
-      <li class="icon icon-instagtam"></li>
-      <li class="icon icon-linkedin"></li>
-    </ul>
+          <ul class="grid features-list">
+            <li class="feature-item grid-item">
+              <div class="feature-item-content">
+                <img src="./images/office.webp" alt="" />
+              </div>
+            </li>
+            <li class="feature-item grid-item">
+              <div class="feature-item-content">2</div>
+            </li>
+            <li class="feature-item grid-item">
+              <div class="feature-item-content">3</div>
+            </li>
+            <li class="feature-item grid-item">
+              <div class="feature-item-content">4</div>
+            </li>
+            <li class="feature-item grid-item">
+              <div class="feature-item-content">5</div>
+            </li>
+            <li class="feature-item grid-item">
+              <div class="feature-item-content">6</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section reviews">
+        <div class="container">
+          <h2 class="section-title">Заголовок второй секции</h2>
+
+          <ul class="reviews-list">
+            <li class="review-item">
+              <div class="review-item-content">1</div>
+            </li>
+            <li class="review-item">
+              <div class="review-item-content">2</div>
+            </li>
+            <li class="review-item">
+              <div class="review-item-content">3</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>

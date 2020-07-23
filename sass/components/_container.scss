@@ -1,0 +1,22 @@
+.container {
+  // For mobile devices
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $tablet-lower) {
+    // For tablet devices
+    width: 480px;
+  }
+
+  @media screen and (min-width: $tablet-upper) {
+    // For small desktop devices
+    width: 768px;
+  }
+
+  @media screen and (min-width: $desktop-sm-upper) {
+    // For large desktop devices
+    width: 1200px;
+  }
+}
